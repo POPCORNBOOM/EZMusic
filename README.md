@@ -1,6 +1,9 @@
 #NetEz
 > :cake: 一个免费简单的网易云音乐下载器
 
+#### 注
+
+- EZmusic 跟随 <a href="https://github.com/yiyungent/Meting4Net" target="_blank">Meting4Net</a> 跟随 <a href="https://github.com/metowolf/Meting" target="_blank">Meting</a> 更新
 
 
 
@@ -23,8 +26,12 @@ EZmusic: 使用 <a href="https://github.com/yiyungent/Meting4Net" target="_blank
 - [x] 网易云音乐/QQ音乐 公开歌单搜索
 - [x] 1~10 多线程下载
 - [x] 自定义下载路径
+- [x] 一键打开网易云音乐/QQ音乐官网
+- [x] 搜索时获取歌曲封面
+- [x] 获取歌曲歌词api地址
 ## TODO
 - [ ] 网易云音乐/QQ音乐 单曲搜索
+- [ ] “同时下载歌词文件”开关
 
 ## 存在的Bug（已修复的bug已删除）
 - [ ] 两个或以上线程下载文件名玩完相同时会产生冲突
@@ -35,9 +42,6 @@ EZmusic: 使用 <a href="https://github.com/yiyungent/Meting4Net" target="_blank
 - [ ] 要求文件命名在连接曲名和艺术家时添加符号分隔
 
 
-#### 注
-
-- EZmusic 跟随 <a href="https://github.com/yiyungent/Meting4Net" target="_blank">Meting4Net</a> 跟随 <a href="https://github.com/metowolf/Meting" target="_blank">Meting</a> 更新
 
 
 ## 依赖
@@ -64,6 +68,7 @@ EZmusic: 使用 <a href="https://github.com/yiyungent/Meting4Net" target="_blank
 
 ## 鸣谢
 
+- 感谢测试工程师，有了他们的努力付出，才有今天的bug被一个个查明
 - 本项目使用 <a href="https://github.com/yiyungent/Meting4Net" target="_blank">Meting4Net</a> 作为API获取，感谢作者 yiyungent 的贡献
 
 
