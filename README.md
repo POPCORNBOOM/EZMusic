@@ -26,7 +26,12 @@ EZmusic: 使用 <a href="https://github.com/yiyungent/Meting4Net" target="_blank
 ## TODO
 - [ ] 网易云音乐/QQ音乐 单曲搜索
 
+## 存在的Bug
+- [ ] 两个或以上线程下载文件名玩完相同时会产生冲突
 
+## 其他收纳的建议
+- [ ] 要求增大窗口
+- [ ] 要求文件命名在连接曲名和艺术家时添加符号分隔
 
 
 #### 注
