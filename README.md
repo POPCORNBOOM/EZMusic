@@ -6,13 +6,14 @@
 
 ## 介绍
 
-EZmusic: Using <a href="https://github.com/yiyungent/Meting4Net" target="_blank">Meting4Net</a>, thanks to <a href="https://github.com/yiyungent/Meting4Net" target="_blank">Meting4Net</a>.   
+EZmusic: 使用 <a href="https://github.com/yiyungent/Meting4Net" target="_blank">Meting4Net</a>, 感谢 <a href="https://github.com/yiyungent/Meting4Net" target="_blank">Meting4Net</a>.   
 
 * 此软件是 [NetEZ](https://github.com/POPCORNBOOM/NetEZ) 的完全重写迭代，功能更加强大，代码更加简洁，界面更加美观
 
 一个免费简单的网易云音乐/QQ音乐下载器
  + **简单** - 简单易用
- + **轻量** - 10MB大小
+ + **强大** - 功能强大
+ + **轻量** - 1.5MB大小
  + **免费** - 兴趣开发，欢迎打赏
 
 ## 已完成功能
@@ -41,8 +42,7 @@ EZmusic: Using <a href="https://github.com/yiyungent/Meting4Net" target="_blank"
 
 
 ## 快速开始
-暂未打包
-请自行本地编译
+- EZmusic/bin/release
 
 
 ## 环境
