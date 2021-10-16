@@ -1,0 +1,14 @@
+K:\VS项目\EZMusic\EZMusic\EZMusic\bin\Release\EZMusic.exe.config
+K:\VS项目\EZMusic\EZMusic\EZMusic\bin\Release\EZMusic.exe
+K:\VS项目\EZMusic\EZMusic\EZMusic\bin\Release\EZMusic.pdb
+K:\VS项目\EZMusic\EZMusic\EZMusic\bin\Release\Newtonsoft.Json.dll
+K:\VS项目\EZMusic\EZMusic\EZMusic\bin\Release\Newtonsoft.Json.xml
+K:\VS项目\EZMusic\EZMusic\EZMusic\obj\Release\EZMusic.csproj.AssemblyReference.cache
+K:\VS项目\EZMusic\EZMusic\EZMusic\obj\Release\EZMusic.Form1.resources
+K:\VS项目\EZMusic\EZMusic\EZMusic\obj\Release\EZMusic.Properties.Resources.resources
+K:\VS项目\EZMusic\EZMusic\EZMusic\obj\Release\EZMusic.csproj.GenerateResource.cache
+K:\VS项目\EZMusic\EZMusic\EZMusic\obj\Release\EZMusic.csproj.CoreCompileInputs.cache
+K:\VS项目\EZMusic\EZMusic\EZMusic\obj\Release\EZMusic.exe
+K:\VS项目\EZMusic\EZMusic\EZMusic\obj\Release\EZMusic.pdb
+K:\VS项目\EZMusic\EZMusic\EZMusic\obj\Release\EZMusic.Form_helpne.resources
+K:\VS项目\EZMusic\EZMusic\EZMusic\obj\Release\EZMusic.Form_helpqq.resources
