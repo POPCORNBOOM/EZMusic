@@ -47,8 +47,8 @@ NetEz: Using <a href="https://github.com/yiyungent/Meting4Net" target="_blank">M
 
 ## 环境
 
-- 运行环境: .NET Framework
-- 开发环境: Visual Studio Community 2019
+- 运行环境: .NET Framework 3.5
+- 开发环境: Visual Studio 2022 Preview
 
 ## 相关项目
 
