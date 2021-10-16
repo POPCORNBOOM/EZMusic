@@ -20,6 +20,8 @@ NetEz: Using <a href="https://github.com/yiyungent/Meting4Net" target="_blank">M
 - [x] 网易云音乐/QQ音乐 付费歌曲下载
 - [x] 网易云音乐/QQ音乐 试听歌曲下载
 - [x] 网易云音乐/QQ音乐 公开歌单搜索
+- [x] 1~10 多线程下载
+- [x] 自定义下载路径
 ## TODO
 - [ ] 网易云音乐/QQ音乐 单曲搜索
 
