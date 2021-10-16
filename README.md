@@ -72,9 +72,9 @@ EZmusic: 使用 <a href="https://github.com/yiyungent/Meting4Net" target="_blank
 - 本项目使用 <a href="https://github.com/yiyungent/Meting4Net" target="_blank">Meting4Net</a> 作为API获取，感谢作者 yiyungent 的贡献
 
 
-## Donate
+## 捐赠
 
-We accept donations through these channels:
+我们接受通过以下方式的捐赠，感谢您的鼓励与支持！
 - <a href="https://afdian.net/@PopcornBoom" target="_blank">爱发电</a>
 
 [![爱发电](https://z3.ax1x.com/2021/04/04/cuwiDK.jpg)](https://imgtu.com/i/cuwiDK)
