@@ -18,3 +18,5 @@ K:\VS项目\EZMusic\EZMusic\EZMusic\obj\Debug\EZMusic.csproj.CoreCompileInputs.c
 K:\VS项目\EZMusic\EZMusic\EZMusic\obj\Debug\EZMusic.exe
 K:\VS项目\EZMusic\EZMusic\EZMusic\obj\Debug\EZMusic.pdb
 K:\VS项目\EZMusic\EZMusic\EZMusic\bin\Debug\EZMusic.exe.config
+K:\VS项目\EZMusic\EZMusic\EZMusic\obj\Debug\EZMusic.Form_helpne.resources
+K:\VS项目\EZMusic\EZMusic\EZMusic\obj\Debug\EZMusic.Form_helpqq.resources

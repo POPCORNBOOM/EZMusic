@@ -137,6 +137,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bitbug_favicon %282%29.ico" />
+    <None Include="Resources\未命名.png" />
+    <None Include="Resources\32xred.png" />
+    <None Include="Resources\32x4.png" />
+    <None Include="Resources\32x3.png" />
+    <None Include="Resources\32x2.png" />
     <None Include="Resources\tot qq.png" />
     <None Include="Resources\tot ne.png" />
   </ItemGroup>

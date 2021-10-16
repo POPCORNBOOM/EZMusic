@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Security;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
@@ -28,6 +29,7 @@ namespace EZMusic
             CheckForIllegalCrossThreadCalls = false;
             cb_getpic.Checked = Properties.Settings.Default.isgetpic;
             cb_delafterfinish.Checked = Properties.Settings.Default.isdelafterfinish;
+            cb_searchchecked.Checked = Properties.Settings.Default.istickallsearching;
             tb_maxthread.Text = Properties.Settings.Default.maxthread.ToString();
             if (Properties.Settings.Default.isnetease)
                 b_server.BackgroundImage = Properties.Resources.netease;
@@ -36,6 +38,16 @@ namespace EZMusic
             Thread t1 = new Thread(downthread);
             t1.Start();
         }
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+        [DllImport("user32.dll")]
+        public static extern bool SendMessage(IntPtr hwnd, int wMsg, int wParam, int lParam);
+
+        bool beginMove = false;//初始化鼠标位置
+        int currentXPosition;
+        int currentYPosition;
+
+
         private void btn_search_Click(object sender, EventArgs e)
         {
             Thread t = new Thread(searching);
@@ -70,9 +82,11 @@ namespace EZMusic
                 dgv_user.Rows[index].Cells[4].Value = item.lrc;
                 if (Properties.Settings.Default.isnetease) dgv_user.Rows[index].Cells[6].Value = "n"; else dgv_user.Rows[index].Cells[6].Value = "t";
                 if (cb_getpic.Checked) dgv_user.Rows[index].Cells[5].Value = Image.FromStream(WebRequest.Create(item.cover).GetResponse().GetResponseStream());
+                if(cb_searchchecked.Checked) dgv_user.Rows[index].Cells[7].Value = "t";else dgv_user.Rows[index].Cells[7].Value = "f";
                 index++;
             }
             btn_search.Enabled = true;
+            return;
 
         }
         public string GetHttpRes(string url,int timeout = 60000)
@@ -155,12 +169,16 @@ namespace EZMusic
             int index = dgv_downlist.RowCount;
             foreach(DataGridViewRow row in dgv_user.Rows)
             {
-                dgv_downlist.Rows.Add();
-                dgv_downlist.Rows[index].Cells[0].Value=row.Cells[1].Value;
-                dgv_downlist.Rows[index].Cells[1].Value = row.Cells[2].Value;
-                dgv_downlist.Rows[index].Cells[2].Value = row.Cells[3].Value;
-                dgv_downlist.Rows[index].Cells[3].Value = "waiting";
-                if(row.Cells[6].Value=="t")dgv_downlist.Rows[index].Cells[4].Value = Properties.Resources.qq;else dgv_downlist.Rows[index].Cells[4].Value = Properties.Resources.netease;
+                if (row.Cells[7].Value == "t")
+                {
+                    dgv_downlist.Rows.Add();
+                    dgv_downlist.Rows[index].Cells[0].Value = row.Cells[1].Value;
+                    dgv_downlist.Rows[index].Cells[1].Value = row.Cells[2].Value;
+                    dgv_downlist.Rows[index].Cells[2].Value = row.Cells[3].Value;
+                    dgv_downlist.Rows[index].Cells[3].Value = "waiting";
+                    if (row.Cells[6].Value == "t") dgv_downlist.Rows[index].Cells[4].Value = Properties.Resources.qq; else dgv_downlist.Rows[index].Cells[4].Value = Properties.Resources.netease;
+
+                }
                 index++;
                 inline++;
             }
@@ -190,7 +208,7 @@ namespace EZMusic
                         {
                             row.Cells[3].Value = "downloading";
                             string url = row.Cells[2].Value.ToString();
-                            Thread thread = new Thread(() => startdown(url,l_dir.Text + ReplaceBadCharOfFileName(row.Cells[0].Value.ToString()) +".mp3",row));
+                            Thread thread = new Thread(() => startdown(url,l_dir.Text + ReplaceBadCharOfFileName(row.Cells[0].Value.ToString() + row.Cells[1].Value) +".mp3",row));
                             thread.Start();
                             indownloading++;
                             inline--;
@@ -205,6 +223,8 @@ namespace EZMusic
         }
         public void startdown(string url,string filename ,DataGridViewRow row)
         {
+            if (row.Index == -1)
+                return;
             bool succeed = true;
             string tempFile = filename + ".temp"; //临时文件
             if (File.Exists(tempFile))
@@ -238,10 +258,10 @@ namespace EZMusic
             {
                 if (Properties.Settings.Default.isdelafterfinish)
                 {
-                isusing = true;
-                Thread.Sleep(5);
-                dgv_downlist.Rows.Remove(row);
-                isusing = false;
+                    isusing = true;
+                    Thread.Sleep(5);
+                    dgv_downlist.Rows.Remove(row);
+                    isusing = false;
                 }
                 else
                     row.Cells[3].Value = "finish";
@@ -354,6 +374,60 @@ namespace EZMusic
         private void btn_opensavefolder_Click(object sender, EventArgs e)
         {
             Process.Start(Properties.Settings.Default.dir);
+
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                beginMove = true;
+                currentXPosition = MousePosition.X;//鼠标的x坐标为当前窗体左上角x坐标
+                currentYPosition = MousePosition.Y;//鼠标的y坐标为当前窗体左上角y坐标
+            }
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (beginMove)
+            {
+                this.Left += MousePosition.X - currentXPosition;//根据鼠标x坐标确定窗体的左边坐标x
+                this.Top += MousePosition.Y - currentYPosition;//根据鼠标的y坐标窗体的顶部，即Y坐标
+                currentXPosition = MousePosition.X;
+                currentYPosition = MousePosition.Y;
+            }
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                currentXPosition = 0; //设置初始状态
+                currentYPosition = 0;
+                beginMove = false;
+            }
+        }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            System.Environment.Exit(0);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void cb_searchchecked_CheckedChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.istickallsearching = cb_searchchecked.Checked;
+            Properties.Settings.Default.Save();
+
+        }
+
+        private void btn_github_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/POPCORNBOOM/EZMusic");
 
         }
     }

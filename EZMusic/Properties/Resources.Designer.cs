@@ -83,6 +83,46 @@ namespace EZMusic.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap _32x2 {
+            get {
+                object obj = ResourceManager.GetObject("32x2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap _32x3 {
+            get {
+                object obj = ResourceManager.GetObject("32x3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap _32x4 {
+            get {
+                object obj = ResourceManager.GetObject("32x4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap _32xred {
+            get {
+                object obj = ResourceManager.GetObject("32xred", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap EZmusic {
             get {
                 object obj = ResourceManager.GetObject("EZmusic", resourceCulture);
@@ -126,6 +166,16 @@ namespace EZMusic.Properties {
         internal static System.Drawing.Bitmap tot_qq {
             get {
                 object obj = ResourceManager.GetObject("tot qq", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 未命名 {
+            get {
+                object obj = ResourceManager.GetObject("未命名", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

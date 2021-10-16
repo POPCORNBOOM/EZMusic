@@ -82,5 +82,17 @@ namespace EZMusic.Properties {
                 this["isdelafterfinish"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool istickallsearching {
+            get {
+                return ((bool)(this["istickallsearching"]));
+            }
+            set {
+                this["istickallsearching"] = value;
+            }
+        }
     }
 }
