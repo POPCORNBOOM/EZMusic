@@ -6,9 +6,9 @@
 
 ## 介绍
 
-NetEz: Using <a href="https://github.com/yiyungent/Meting4Net" target="_blank">Meting4Net</a>, thanks to <a href="https://github.com/yiyungent/Meting4Net" target="_blank">Meting4Net</a>.   
+EZmusic: Using <a href="https://github.com/yiyungent/Meting4Net" target="_blank">Meting4Net</a>, thanks to <a href="https://github.com/yiyungent/Meting4Net" target="_blank">Meting4Net</a>.   
 
-* 此软件是 [NetEZ](https://github.com/POPCORNBOOM/NetEZ) 的迭代，功能更加强大，代码更加简洁
+* 此软件是 [NetEZ](https://github.com/POPCORNBOOM/NetEZ) 的完全重写迭代，功能更加强大，代码更加简洁，界面更加美观
 
 一个免费简单的网易云音乐/QQ音乐下载器
  + **简单** - 简单易用
