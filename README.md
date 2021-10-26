@@ -2,7 +2,7 @@
 > :cake: 一个免费简单的网易云音乐下载器
 
 #### 注
-
+- release是最新版源代码已不是最新（懒得上传）如有需要可以联系我
 - EZmusic 跟随 <a href="https://github.com/yiyungent/Meting4Net" target="_blank">Meting4Net</a> 跟随 <a href="https://github.com/metowolf/Meting" target="_blank">Meting</a> 更新
 
 
